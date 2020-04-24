@@ -40,11 +40,18 @@
 				<div class="card">
 					<div class="card-body">
 						<form accept-charset="UTF-8" action="addClient" method="post">
-							<label for="exampleFormControlInput1">Nombres</label> 
-							<input name="cliente.nom_cliente" type="text" class="form-control"	id="exampleInputEmail1">
 							<div class="form-group">
-								<label for="exampleFormControlSelect1">Distrito</label> 
-								<select	class="form-control" id="id_distrito"
+								<input name="cliente.nom_cliente" type="text"
+									class="form-control" id="exampleInputEmail1"
+									placeholder="nombre">
+							</div>
+							<div class="form-group">
+								<input name="cliente.nro_dni" type="text" class="form-control"
+									id="exampleInputEmail1" placeholder="Nro dni">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlSelect1">Distrito</label> <select
+									class="form-control" id="id_distrito"
 									name="tb_distrito.cod_distrito">
 									<option value=" ">[Seleccione]</option>
 								</select>
@@ -72,6 +79,7 @@
 										<tr>
 											<th>ID</th>
 											<th>Nombre</th>
+											<th>Dni</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -79,6 +87,7 @@
 											<tr>
 												<td>${x.cod_cliente}</td>
 												<td>${x.nom_cliente}</td>
+												<td>${x.nro_dni}</td>
 											</tr>
 										</c:forEach>
 									</tbody>

@@ -28,6 +28,7 @@ public class MySqlClienteDAO implements ClienteDAO {
 				bean = new ClienteBean();
 				bean.setCod_cliente(rs.getInt(1));
 				bean.setNom_cliente(rs.getString(2));
+				bean.setNro_dni(rs.getInt(3));
 				lista.add(bean);
 			}
 			System.out.println("Listado dao  OK");
@@ -50,10 +51,11 @@ public class MySqlClienteDAO implements ClienteDAO {
 		PreparedStatement pstm = null;
 		int insertados = -1;
 		try {
-			String sql = "insert into tb_cliente values(null,?)";
+			String sql = "insert into tb_cliente values(null,?,?)";
 			conn = new Conexion().getAcceso();
 			pstm = conn.prepareStatement(sql);
-			pstm.setString(1, obj.getNom_cliente());		
+			pstm.setString(1, obj.getNom_cliente());	
+			pstm.setInt(2, obj.getNro_dni());
 			insertados = pstm.executeUpdate();
 			System.out.println("Agregado dao  OK");
 		} catch (Exception e) {

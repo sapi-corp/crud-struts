@@ -4,8 +4,17 @@ public class ClienteBean {
 	
 	private int cod_cliente;
 	private String nom_cliente;
+	private int nro_dni;
 	
 	
+	
+	
+	public int getNro_dni() {
+		return nro_dni;
+	}
+	public void setNro_dni(int nro_dni) {
+		this.nro_dni = nro_dni;
+	}
 	public int getCod_cliente() {
 		return cod_cliente;
 	}
