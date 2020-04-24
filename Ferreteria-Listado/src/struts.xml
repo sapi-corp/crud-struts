@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dawi"  extends="struts-default,json-default">
+
+<!-- 	<result-types> -->
+<!-- 		<result-type name="tiles" namespace="/" class="org.apache.struts2.views.tiles.TilesResult"></result-type> -->
+<!-- 	</result-types> -->
+
+		<action name="registrarVendedor" class="com.ferreteria.action.VendedorAction">
+			<result name="exito">/WEB-INF/paginas/resultado.jsp</result>
+		</action>
+				<action name="consultaCliente" class="com.ferreteria.action.ClienteAction">
+<!-- 				<result name="exito">/WEB-INF/paginas/formulario.jsp</result> -->
+		</action>
+		<action name="addClient" class="com.ferreteria.action.ClienteAction">
+			
+		</action>
+
+	</package>
+	
+	
+
+</struts>

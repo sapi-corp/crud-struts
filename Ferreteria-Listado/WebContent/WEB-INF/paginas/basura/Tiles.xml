@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 
+    2.0//EN" "http://Tiles.apache.org/dtds/tiles-config_2.0.dtd">
+    
+    <tiles-definitions>
+    	<definition>
+    		<put-attribute name="d_plantilla" template="/WEB-INF/paginas/plantillas/plantilla.jsp"/>
+    		<put-attribute name="cabecera" value="/WEB-INF/paginas/secciones/cabecera.jsp"/>
+    		<put-attribute name="menu" value="/WEB-INF/paginas/secciones/menu.jsp"/>
+    		<put-attribute name="contenido" value=""/>
+    		<put-attribute name="pie" value="/WEB-INF/paginas/secciones/pie.jsp"/>
+    	</definition>
+    	<definition name="d_principal" extends="d_plantilla">
+    		<put-attribute name="contenido" value="/WEB-INF/paginas/principal.jsp"/>
+    	</definition>
+    </tiles-definitions>
